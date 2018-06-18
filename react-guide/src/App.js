@@ -7,7 +7,7 @@ class App extends Component {
     persons: [
       { id: 'asfa1', name: 'Max', age: 28 },
       { id: 'vasdf1', name: 'Manu', age: 29 },
-      { id: 'asdf11', name: 'Stephanie', age: 26 }
+      { id: 'asdf11', name: 'Stephanie', age: 26 } 
     ],
     otherState: 'some other value',
     showPersons: false
@@ -51,7 +51,8 @@ class App extends Component {
       font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      transition: 'all 1s ease'
     };
 
     let persons = null;
@@ -69,7 +70,8 @@ class App extends Component {
           })}
         </div>
       );
-      style.backgroundColor = "red"
+      style.backgroundColor = "red";
+      style.transition = 'all 1s ease';
     }
 
     //let classes = ['red', 'bold'].join(' ');

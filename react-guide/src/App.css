@@ -1,10 +1,27 @@
 .App{
     text-align: center;
 }
-.btn{
+button{
     text-transform: uppercase;
     margin: 0 20px;
     cursor: pointer;
+    background-color: green;
+    padding: 10px;
+    color:wheat;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+button:hover{
+    background-color: lightgreen;
+    color: black;
+    transition: all 1s ease;
+}
+.Red{
+    background-color: red;
+}
+.Red:hover{
+    background-color: coral;
+    color: black;
 }
 .red{
     width: 250px;

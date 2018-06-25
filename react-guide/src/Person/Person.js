@@ -3,6 +3,10 @@ import classes from './Person.css';
 
 class Person extends Component {
   render() {
+    const rnd = Math.random();
+    if (rnd >=0.7){
+      throw new Error('Something went wrong!!')
+    }
     return (
       <div className={classes.Person}>
         <h1 onClick={this.props.click}>Hi I am {this.props.name}</h1>

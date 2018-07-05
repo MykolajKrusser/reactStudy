@@ -1,0 +1,35 @@
+button{
+    text-transform: uppercase;
+    margin: 0 20px;
+    cursor: pointer;
+    background-color: green;
+    padding: 10px;
+    color:wheat;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+button:hover{
+    background-color: lightgreen;
+    color: black;
+    transition: all 1s ease;
+}
+.Red{
+    background-color: red;
+}
+.Red:hover{
+    background-color: coral;
+    color: black;
+}
+.red{
+    width: 250px;
+    color: red;
+    border: 1px solid red;
+    transition: all 1s ease;
+    margin:20px auto;
+    
+}
+.bold{
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 1s ease;
+}

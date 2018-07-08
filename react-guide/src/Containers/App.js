@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classesApp from './App.css';
 import Persons from '../Components/Persons/Persons';
 import Cockpit from '../Components/Cockpit/Cockpit';
+export const AuthContext = React.createContext(false); //react 16 feature
 
 class App extends Component {
   state = {
@@ -10,7 +11,13 @@ class App extends Component {
       { id: 'vasdf1', name: 'Oksana', age: 25 },
       { id: 'asdf11', name: 'Maluk', age: 18 }
     ],
-    showPersons: false
+    showPersons: false,
+    authenticated: false
+  }
+
+  loginHandler = ()=>{
+    this.setState({authenticated: true})
+    console.log(this.state.authenticated)
   }
 
   nameChangedHandler = ( event, id ) => {
@@ -50,15 +57,17 @@ class App extends Component {
       persons = <Persons 
         persons={this.state.persons} 
         clicked={this.deletePersonHandler} 
-        changed={this.nameChangedHandler}/>
+        changed={this.nameChangedHandler}
+        />
     }
     return (
       <div className={classesApp.App}>
-        <Cockpit
-        persons={this.state.persons} 
-        togglePersonsHandler={this.togglePersonsHandler}
-        />
-        {persons}
+          <Cockpit
+          persons={this.state.persons} 
+          togglePersonsHandler={this.togglePersonsHandler}
+          login={this.loginHandler}
+          />
+        <AuthContext.Provider value={this.state.authenticated}>{persons}</AuthContext.Provider>
       </div>
     );
   }
